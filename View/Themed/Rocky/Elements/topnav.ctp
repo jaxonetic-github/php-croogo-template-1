@@ -6,7 +6,8 @@
 $this -> Html -> scriptBlock("
 jQuery(function($) {
                    $('.rocky-menuitem').click(function(evt){
-         
+                        $('.active').toggleClass('active');
+                        $(this).addClass(active);
                     });
  });          
 ", array('inline' => false));

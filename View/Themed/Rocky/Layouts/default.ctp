@@ -34,7 +34,7 @@
         echo $this->Html->css("sass-bootstrap.min");
         echo $this->Html->css("jumbotron-narrow");
         echo $this->Html->css("rocky");
-        
+        echo $this->Html->script("jquery.cookie");
     ?>
 </head>
 <body>
