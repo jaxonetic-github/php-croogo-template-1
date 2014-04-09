@@ -6,7 +6,9 @@
 class RockyController extends AppController {
 
   public $helpers = array('Html');
-
+  
+  var $layout = 'rocky';
+  
   public function index(){}
 
 	
