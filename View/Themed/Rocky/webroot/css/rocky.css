@@ -8,6 +8,11 @@
   text-transform: capitalize;
 }
 
+/* line 3, ../sass/rocky.scss */
+.active {
+  background-color: rgba(210, 210, 210, 0.8);
+}
+
 /* line 5, ../sass/rocky.scss */
 #header-search {
   position: absolute;
