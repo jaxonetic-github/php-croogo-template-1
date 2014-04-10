@@ -31,14 +31,15 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('author',    'Alonzo Jackson');
 		
         echo $this->Html->css("sass-bootstrap.min");
-		echo $this->Html->css("offcanvas");
+		//echo $this->Html->css("offcanvas");
 		echo $this->Html->css("rocky");
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->Html->script('jquery-2.0.2.min');
 		echo $this->Html->script('imgLiquid');
-		echo $this->Html->script('offcanvas');
+       echo $this->Html->css("jumbotron");
+		//echo $this->Html->script('offcanvas');
 		echo $this->fetch('script');
 		
 	?>
@@ -46,19 +47,22 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body>
 	
 	  
-		<div id="content">
+    <div id="content" class="jumbotron">
+      <?php echo $this->fetch('header'); ?>
+        
+    
+            <?php echo $this->Session->flash(); ?>
 
-			<?php echo $this->Session->flash(); ?>
+            <?php echo $this->fetch('content'); ?>
+        </div>
+        
+        <?php echo $this->fetch('footer_common'); ?>
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-		
-		<?php echo $this->element('footer_common'); ?>
-		
-		
-		<?php echo $this->fetch('bottomscript'); ?>
-		
-	
+        
+        <?php echo $this->fetch('bottomscript'); ?>
+        
+    
+    
 	
 </body>
 </html>

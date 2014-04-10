@@ -5,7 +5,7 @@
                <div class="container">
 <p>Project Details (<?php echo $projectdetail['ProjectCategory']['category'] ?>)
 <p/><h4 id="scripps"><?php  echo $projectdetail['Project']['title'] ?></h4>
-<?php  echo $this -> Html -> image("projects/roughcarpentry_framing/" . $projectdetail['Project']['image_name'], array('alt' => 'Scripps Ranch High School', 'class' => 'img-responsive')); ?>
+<?php  echo $this -> Html -> image("projects/roughcarpentry_framing/" . $projectdetail['Project']['image_name'], array('alt' => 'Scripps Ranch High School', 'class' => 'rocky-img-responsive')); ?>
 <ul>
     <li>
         Client: <?php echo  $projectdetail['Project']['client_name'] ?>

@@ -22,7 +22,7 @@ jQuery(function($) {
     * Handles menu click events
     */
                    $('.rocky-menuitem').click(function(evt){
-                       // $('.active').toggleClass('active');
+                        $('.active').toggleClass('active');
                         
                         //get the list of classes for this element
                         var classList = $(this).attr('class').split(/\s+/);
@@ -32,7 +32,11 @@ jQuery(function($) {
                            //I want the text after [rockynav-] 
                          
                            if(classList[index].substring(0, 9)==='rockynav-'){
-                                $.cookie('activeNav', 'classList[index].substring(9)', { expires: .2 });
+                               console.log(classList[index].substring(9));
+                                    
+                               $('#content').load(classList[index].substring(9));
+                                //keeping track of the active menuitem as we navigate pages
+                                $.cookie('activeNav', classList[index].substring(9));
                            }
                         });
                         $(this).addClass('active');
@@ -59,7 +63,7 @@ jQuery(function($) {
 
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="top-navbar-collapse">
-    <ul class="nav  navbar-nav  navtext  nav-justified ">
+    <ul class="nav   navtext  nav-justified ">
       <li class="active rocky-menuitem rockynav-home"><a href="#">home</a></li>
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">company <b class="caret"></b></a>

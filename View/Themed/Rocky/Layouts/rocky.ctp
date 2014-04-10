@@ -31,7 +31,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('author',    'Alonzo Jackson');
 		
         echo $this->Html->css("sass-bootstrap.min");
-		echo $this->Html->css("jumbotron-narrow");
+		echo $this->Html->css("jumbotron");
 		echo $this->Html->css("rocky");
 		
 		echo $this->fetch('meta');
@@ -42,10 +42,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		?>
 </head>
 <body>
-	
+	<div id="content" class="jumbotron">
 	  <?php echo $this->fetch('header'); ?>
-		<div id="content">
-
+		
+    
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>

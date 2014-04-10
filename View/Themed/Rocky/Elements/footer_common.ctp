@@ -36,7 +36,7 @@
   </div>
 
 
-  <div class="collapse navbar-collapse" id="footer-navbar-collapse-1">
+  <div class="collapse navbar-collapse rocky-center-aligned" id="footer-navbar-collapse-1">
     <ul class="nav navbar-nav center-block">
       <li class="active"><a href="#">home</a></li>
       <li><a href="#">news</a></li>
