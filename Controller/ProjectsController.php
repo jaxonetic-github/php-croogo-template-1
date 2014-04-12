@@ -6,15 +6,23 @@
 class ProjectsController extends AppController {
 
   public $helpers = array('Html');
-  var $layout = 'rocky';
+  var $layout = 'projects';
   
   public function index(){
-      $this -> layout = 'projects';
+     
     
-      $projects = $this->Project->findAll();
+      $projects = $this->Project->find('all', array('order' => array('project_categories')));
+      $organizedResult = array();
+      $ctr = 0;
       
-     //  debug($projects);
-       $this->set('projects', $projects);
+      //create 2 dim array based on CategoryNAme
+       foreach ($projects as $key => $value) {
+    
+           $organizedResult[$value['ProjectCategory']['category']][]=$value['Project'];
+          
+       }
+        
+       $this->set('projects', $organizedResult);
   }
   
   public function details(){

@@ -1,0 +1,14 @@
+{
+ "name": "DebugKit",
+ "description": "DebugKit",
+
+ "author": "Author Name",
+ "authorEmail": "author@example.com",
+ "authorUrl": "http://example.com",
+
+ "dependencies": {
+  "plugins": [
+    "extensions"
+  ]
+ }
+}

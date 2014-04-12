@@ -7,8 +7,12 @@ class Project extends AppModel {
   
      
      
-    public $hasOne = 
-        array( 'ProjectCategory'=> array( 'classname'=>'ProjectCategory','foreignKey'=>'id' ));
+    public $belongsTo =  array(
+         'ProjectCategory' =>  array( 
+                   'classname'=> 'ProjectCategory'
+                   ,'foreignKey' => 'project_categories'
+                  )
+         );
     
  
    

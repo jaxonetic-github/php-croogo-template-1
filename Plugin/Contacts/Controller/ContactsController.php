@@ -157,6 +157,8 @@ class ContactsController extends ContactsAppController {
 			$this->request->data['Message']['contact_id'] = $contact['Contact']['id'];
 			$this->request->data['Message']['title'] = htmlspecialchars($this->request->data['Message']['title']);
 			$this->request->data['Message']['name'] = htmlspecialchars($this->request->data['Message']['name']);
+            $this->request->data['Message']['phone'] = htmlspecialchars($this->request->data['Message']['phone']);
+            $this->request->data['Message']['address'] = htmlspecialchars($this->request->data['Message']['address']);
 			$this->request->data['Message']['body'] = htmlspecialchars($this->request->data['Message']['body']);
 			$continue = $this->_validation($continue, $contact);
 			$continue = $this->_spam_protection($continue, $contact);
