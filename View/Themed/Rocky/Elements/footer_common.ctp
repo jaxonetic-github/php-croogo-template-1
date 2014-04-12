@@ -3,7 +3,7 @@
       <!-- alliances section -->
      <div class="jumbotron">
       <div class="container">
-      	<ul id="home-news" class="list-inline">
+      	<ul id="home-news" class="list-inline  rocky-center-aligned">
  		 <li><?php  echo $this->Html->image("home/sbe_logo.png", array('alt' => 'SBE')); ?></li>
  		 <li><?php  echo $this->Html->image("home/agc_logo.png", array('alt' => 'AGC')); ?></li>
   		 <li><?php  echo $this->Html->image("home/safetymatters.png", array('alt' => 'SAFETY MATTERS')); ?></li>
@@ -21,6 +21,7 @@
       </div>
     </div>
 
+  <div class="jumbotron">
   <!-- The collapsable footer navbar -->
    <div class="container">
   <nav class="navbar navbar-default" role="navigation">
@@ -37,7 +38,7 @@
 
 
   <div class="collapse navbar-collapse rocky-center-aligned" id="footer-navbar-collapse-1">
-    <ul class="nav navbar-nav center-block">
+    <ul class="list-inline  rocky-center-aligned">
       <li class="active"><a href="#">home</a></li>
       <li><a href="#">news</a></li>
       <li><a href="#">about&nbsp;us</a></li>
@@ -48,7 +49,7 @@
     </ul>
    </div>
    </nav>
-
+   </div><!--container-->
   </div>
   
    <div class="container">

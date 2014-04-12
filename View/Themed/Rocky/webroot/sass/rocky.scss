@@ -1,3 +1,10 @@
+.scrollspy-example {
+  display: block;
+  overflow: scroll;
+  width: 300px;
+  height: 200px;
+}
+
 .uppercased{ text-transform: uppercase;}
 .capitalized{text-transform:capitalize;}
 .active{background-color:rgba(210,210,210,.8);}
@@ -60,10 +67,38 @@ footer{text-align:center}
 
 }//body
 
-.rockytopnav{}
+.rockytopnav{margin-top:100px;}
 //overriding bootstrap 
 .navbar-default {
     background-color: transparent;
     border: none;
     
 }
+
+
+/*** Styles to affix sidebar  */
+.body {
+  position: relative;
+}
+.affix {
+  width: inherit; //helped keep the content the same size on fluid layouts
+  position: fixed;
+  top: 200px;  //height of the nav
+}
+
+.affix-top {
+   width: inherit;
+  position: absolute;
+  
+  top: 550px;  //height of the footer
+}
+
+.affix-bottom {
+   width: inherit;
+  position: absolute;
+  
+  top: 800px;  //height of the footer
+}
+#projects-sidemenu{
+  
+background-color: rgba(200,200,200,.8);}

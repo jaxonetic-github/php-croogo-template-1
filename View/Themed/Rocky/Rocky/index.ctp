@@ -10,12 +10,7 @@
 });
          ",array('inline'=>false));
 ?>
-<?php $this->start('header');?>    
 
-<?php echo $this->element('header'); ?>
-
-   <?php $this->end(); ?> 
-   
    
     <!-- Home Page Paragraph -->
    <div class="jumbotron">
@@ -114,12 +109,6 @@ pursue growth and learning, and continue to be passionate in the work we perform
     </div>
 
 
-   <?php $this->start('footer_common');
-
-      echo $this->element('footer_common');
-
-      $this->end();
-    ?>
 
    <?php $this->start('bottomscript');
 

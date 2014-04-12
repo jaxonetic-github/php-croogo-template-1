@@ -1,4 +1,4 @@
-  <div class=" rocky-center-aligned">
+  <div class="rocky-center-aligned">
       <?php  echo $this->Html->image("rocky_logo.png", array('alt' => 'CakePHP')); ?>
   </div>
   

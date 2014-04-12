@@ -42,16 +42,19 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		?>
 </head>
 <body>
+    
+   
+    
 	<div id="content" class="jumbotron">
-	  <?php echo $this->fetch('header'); ?>
-		
+	   <?php echo $this->element('header'); ?>		
     
 			<?php echo $this->Session->flash(); ?>
 
 			<?php echo $this->fetch('content'); ?>
-		</div>
+    </div>
+	
 		
-		<?php echo $this->fetch('footer_common'); ?>
+		<?php echo $this->element('footer_common'); ?>
 
 		
 		<?php echo $this->fetch('bottomscript'); ?>

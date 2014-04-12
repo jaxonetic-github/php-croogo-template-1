@@ -3,6 +3,7 @@
 
 <?php
  echo $this->Html->script("jquery.cookie");
+ echo $this->Html->script('rocky');
  
 $this -> Html -> scriptBlock("
 jQuery(function($) {
@@ -75,9 +76,9 @@ jQuery(function($) {
           <li class="rocky-menuitem"><a href="#">testimonials</a></li>
         </ul>
       </li>
-      <li class="rocky-menuitem rockynav-projects"><a href="#projects">projects</a></li>
-      <li class="rocky-menuitem rockynav-blog"><a href="#blog">news</a></li>
-      <li class="rocky-menuitem rockynav-contactus"><a href="#">contact&nbsp;us</a></li>
+      <li class=""><a href="projects">projects</a></li>
+      <li class=""><a href="blog">news</a></li>
+      <li class=""><a href="contactus">contact&nbsp;us</a></li>
     </ul>
    </div>
 </nav>

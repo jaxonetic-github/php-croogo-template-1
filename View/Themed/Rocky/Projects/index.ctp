@@ -14,7 +14,13 @@ console.log('sdfafdsafssd')
   <ul  class="list-inline"><li class="header-listitem"> <?php  echo $this->Html->image("projects/logo_projects.png", array('alt' => 'Rocky Coast Builders, Inc.')); ?></li>
                             <li  class="header-listitem">
                                 <div>
-                  
+                   <div class="navbar-collapse collapse">
+          <form id="header-search" class="navbar-form navbar-right">
+            <div class="form-group">
+              <input type="text" placeholder="Search" class="form-control">
+            </div>
+          </form>
+        </div><!--/.navbar-collapse -->
                                     
                                 </div>
                                 <div> <?php echo $this->element('topnav'); ?></div>
@@ -25,10 +31,11 @@ console.log('sdfafdsafssd')
 
 	<div class="container ">
 
-		<div class="row row-offcanvas row-offcanvas-right">
-			<div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+		<div class="row">
+			<div class="col-xs-6 col-sm-3">
 
-				<?php echo $this -> element('project_sidenav'); ?>
+				<?php echo $this -> element('project_sidenav', array( "projectsByCategory" => $projects) ); ?>
+              
 
 			</div><!--/span-->
 
@@ -40,8 +47,7 @@ console.log('sdfafdsafssd')
 				</p>
 				
 					
-				<?php echo $this -> element('projectDetails', array(
-    "projects" => $projects) ); ?>
+				<?php echo $this -> element('projectDetails', array("projectsByCategory" => $projects) ); ?>
 
 			</div>
 

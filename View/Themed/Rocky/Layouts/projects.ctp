@@ -30,21 +30,22 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('description',    'Construction, Rocky Coast Builders');
 		echo $this->Html->meta('author',    'Alonzo Jackson');
 		
-        echo $this->Html->css("sass-bootstrap.min");
-		//echo $this->Html->css("offcanvas");
+       echo $this->Html->css("sass-bootstrap.min");
+		echo $this->Html->css("offcanvas");
 		echo $this->Html->css("rocky");
 		
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->Html->script('jquery-2.0.2.min');
 		echo $this->Html->script('imgLiquid');
+        echo $this->Html->script('sass-bootstrap.min');
        echo $this->Html->css("jumbotron");
-		//echo $this->Html->script('offcanvas');
+		echo $this->Html->script('offcanvas');
 		echo $this->fetch('script');
 		
 	?>
 </head>
-<body>
+<body data-spy="scroll" data-target="#sidebar">
 	
 	  
     <div id="content" class="jumbotron">
@@ -56,7 +57,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             <?php echo $this->fetch('content'); ?>
         </div>
         
-        <?php echo $this->fetch('footer_common'); ?>
+       <?php echo $this->element('footer_common'); ?>
 
         
         <?php echo $this->fetch('bottomscript'); ?>
