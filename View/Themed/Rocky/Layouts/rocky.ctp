@@ -48,7 +48,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	<div id="content" class="jumbotron">
 	   <?php echo $this->element('header'); ?>		
     
-			<?php echo $this->Session->flash(); ?>
+			<p id="flash-message"><?php echo $this->Session->flash(); ?></p>
 
 			<?php echo $this->fetch('content'); ?>
     </div>

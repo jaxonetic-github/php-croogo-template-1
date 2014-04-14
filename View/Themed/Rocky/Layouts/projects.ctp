@@ -23,7 +23,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <html>
 <head>
 	<?php echo $this->Html->charset(); ?>
-	<title>Rocky Coast Builders, Inc.</title>
+	<title>Rocky Coast Builders, Inc. Projects</title>
 	<?php
 		echo $this->Html->meta('icon');
 		echo $this->Html->meta('viewport', 'width=device-width, initial-scale=1.0');
@@ -45,14 +45,14 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		
 	?>
 </head>
-<body data-spy="scroll" data-target="#sidebar">
+<body data-spy="scroll" data-offset="20" data-target="#sidebar">
 	
 	  
     <div id="content" class="jumbotron">
       <?php echo $this->fetch('header'); ?>
         
     
-            <?php echo $this->Session->flash(); ?>
+            <p id="flash-message"><?php echo $this->Session->flash(); ?></p>
 
             <?php echo $this->fetch('content'); ?>
         </div>
