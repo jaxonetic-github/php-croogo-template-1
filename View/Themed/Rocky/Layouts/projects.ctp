@@ -61,7 +61,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <?php  echo $this -> Html -> image("projects/lightfade.png", array('alt' => '','class' => 'center-block')); ?>
      <div class="container_16" >
          <div class="row">
-             <div class="grid_5"   data-spy="affix" data-offset-bottom="400" >    <?php echo $this->fetch('sidebar'); ?></div> 
+             <div class="grid_5" >    <?php echo $this->fetch('sidebar'); ?></div> 
              <div class="grid_11"> <?php echo $this->fetch('details'); ?></div>
         </div><!--row-->
     </div><!-- container -->

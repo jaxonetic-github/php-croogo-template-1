@@ -138,22 +138,15 @@ footer{text-align:center}
 .affix {
   width: inherit; //helped keep the content the same size on fluid layouts
   position: fixed;
-  top: 295px;  //height of the nav
+  top: 50px;  //height of the nav
 }
 
 .affix-top {
    width: inherit;
   position: absolute;
-  
- // top: 250px;  //height of the footer
+  top: 295px;  //height of the footer
 }
 
-.affix-bottom {
-   width: inherit;
-  position: absolute;
-  
-  top: 520;  //height of the footer
-}
 #projects-sidemenu{background-color: rgba(200,200,200,.5); border-bottom-right-radius: 9px; border-bottom-left-radius: 9px;}
 .projects-detailcategory-section{ padding-top:20px;
 //.small-category{font-size:50%}

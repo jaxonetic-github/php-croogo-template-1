@@ -271,82 +271,76 @@ body footer {
 .affix {
   width: inherit;
   position: fixed;
-  top: 295px;
+  top: 50px;
 }
 
 /* line 144, ../sass/rocky.scss */
 .affix-top {
   width: inherit;
   position: absolute;
+  top: 295px;
 }
 
-/* line 151, ../sass/rocky.scss */
-.affix-bottom {
-  width: inherit;
-  position: absolute;
-  top: 520;
-}
-
-/* line 157, ../sass/rocky.scss */
+/* line 150, ../sass/rocky.scss */
 #projects-sidemenu {
   background-color: rgba(200, 200, 200, 0.5);
   border-bottom-right-radius: 9px;
   border-bottom-left-radius: 9px;
 }
 
-/* line 158, ../sass/rocky.scss */
+/* line 151, ../sass/rocky.scss */
 .projects-detailcategory-section {
   padding-top: 20px;
 }
-/* line 160, ../sass/rocky.scss */
+/* line 153, ../sass/rocky.scss */
 .projects-detailcategory-section .category-title {
   font-size: 30px;
 }
 
-/* line 162, ../sass/rocky.scss */
+/* line 155, ../sass/rocky.scss */
 .projects-actualdetail-section {
   background-color: rgba(130, 130, 130, 0.92);
   padding-top: 15px;
   padding-bottom: 15px;
   margin-bottom: 5px;
 }
-/* line 163, ../sass/rocky.scss */
+/* line 156, ../sass/rocky.scss */
 .projects-actualdetail-section .detail-image {
   height: 300px;
   max-height: 300px;
   width: 100%;
 }
-/* line 164, ../sass/rocky.scss */
+/* line 157, ../sass/rocky.scss */
 .projects-actualdetail-section dl {
   margin-left: 20px;
 }
-/* line 165, ../sass/rocky.scss */
+/* line 158, ../sass/rocky.scss */
 .projects-actualdetail-section dt {
   text-align: left;
 }
 
-/* line 171, ../sass/rocky.scss */
+/* line 164, ../sass/rocky.scss */
 .contact-form {
   width: 60%;
 }
-/* line 172, ../sass/rocky.scss */
+/* line 165, ../sass/rocky.scss */
 .contact-form label {
   float: left;
 }
-/* line 173, ../sass/rocky.scss */
+/* line 166, ../sass/rocky.scss */
 .contact-form input {
   width: 100%;
 }
-/* line 174, ../sass/rocky.scss */
+/* line 167, ../sass/rocky.scss */
 .contact-form textarea {
   width: 100%;
 }
-/* line 175, ../sass/rocky.scss */
+/* line 168, ../sass/rocky.scss */
 .contact-form .submit {
   width: 25%;
 }
 
-/* line 179, ../sass/rocky.scss */
+/* line 172, ../sass/rocky.scss */
 .container_16 .grid_11 {
   float: right;
   width: 640px;

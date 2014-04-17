@@ -1,6 +1,9 @@
 
-
-<div  id="sidebar"    data-spy="affix" data-offset-bottom="520"  >
+<!--
+ * Using Bootstrap Affix to keep nav always in view.
+ * Affixed scrollbar starts off with class .affix-top. After scrolling 200px the class becomes .affix
+-->
+<div  id="sidebar"    data-spy="affix" data-offset-top="200"   >
     
    
     <ul id="projects-sidemenu" class="nav nav-tabs nav-stacked">
