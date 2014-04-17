@@ -5,34 +5,55 @@
   height: 200px;
 }
 
+.carousel-inner {
+    text-align: center;
+
+  }
+  //teal
+  #flashMessages{  color: #008080;
+                   font-size: 22px;}
+#site-news{height:250px}
+#site-news-nav{position:absolute; top:0; right:35px; z-index:101};
 .uppercased{ text-transform: uppercase;}
 .capitalized{text-transform:capitalize;}
-.active{background-color:rgba(210,210,210,.8);}
+.active-mainnav-item, .active{background-color:rgba(210,210,210,.8);}
 .rocky-img-responsive {
     display: block;
     height: auto;
     width: 55%;
 }
+.rocky-project-img-responsive {
+    display: block;
+    height: auto;
+    width: 110%;
+}
+
 .rocky-center-aligned{text-align:center}
 
 
+.col-md-9 {
+    float: right !important;
+}
+.col-md-5 {
+    width: 66.667% !important;
+}
 #header-search{position: absolute; right: 0;}
 .header-listitem{vertical-align:top}
 body {
-    background-image: url("img/bkgrnd_print.png"); background-size: cover;
+    background-image: url("img/bkgrnd_print.png"); background-size: cover; background-position: center top;
     color: #EEEEEE;
     padding:0;
     
    ul.navtext{index-z:100; a{color:white;font-weight: bolder; font-size: 16px; font-size-adjust: 0.6;text-transform: uppercase;font-stretch: ultra-condensed;}}
    .home-text{font-size:16px}
-.jumbotron {  background-color: rgba(0, 0, 0, 0) !important; padding:0;
+.jumbotron {  background-color: rgba(0, 0, 0, 0) !important; padding-bottom:0;
   .container{ max-width: 1109px;
   .horizontal-bar{width:100%; height:4px; background-color:gray;}
   
   
   
   //-------------  News
-  #home-news-banneritems{background-color:gray; font-size: 16px; text-align:left;
+  .home-news-banneritems{background-color:gray; font-size: 16px; text-align:left;width:100%;
             .img-cell{text-align:center; vertical-align: middle;width:24%;
                 .thumbnail{margin:10px}
                 img{}
@@ -54,7 +75,7 @@ body {
       .carousel-inner{
          .item{ 
             .list-inline{
-               li.imgLiquidFill{height:500px; width:30%;}
+               li.imgLiquidFill{height:500px; width:30%; vertical-align: middle;}
                }//.list-inline                
           }//.item
       }//.carousel-inner
@@ -76,6 +97,40 @@ footer{text-align:center}
 }
 
 
+#sidebar{
+   .has-thick-bottom-border{border-bottom: 10px solid rgba(200, 200, 200, 0.5); line-height: 2.5;}
+  .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    background-color:transparent;
+  }
+  .nav >li{border-bottom: 0.1px dotted;}
+  a{color:white}
+#sidebar-header {
+    background-color: rgba(40, 40, 40, 0.77);
+    border-top: 2px outset;
+    border-top-left-radius: 9px;
+    border-top-right-radius: 9px;
+    margin-top: -5px;
+}
+.sidenav-category{
+        .category-indicator{padding-right:10px}
+          a{span{line-height:3.5}}
+ .inner-project-nav{display:none}        
+}
+
+
+#sidenav-footer{background-color:rgba(0,0,0,.3); height: 82px;}
+#footer-img-overlay{background-color: rgba(100, 100, 100, 0.64);
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%;}
+}/***sidebar***/
+
+
+
+
+
+
 /*** Styles to affix sidebar  */
 .body {
   position: relative;
@@ -83,20 +138,46 @@ footer{text-align:center}
 .affix {
   width: inherit; //helped keep the content the same size on fluid layouts
   position: fixed;
-  top: 200px;  //height of the nav
+  top: 295px;  //height of the nav
 }
 
 .affix-top {
    width: inherit;
   position: absolute;
   
-  top: 550px;  //height of the footer
+ // top: 250px;  //height of the footer
 }
 
 .affix-bottom {
    width: inherit;
   position: absolute;
   
-  top: 800px;  //height of the footer
+  top: 520;  //height of the footer
 }
-#projects-sidemenu{background-color: rgba(200,200,200,.5);}
+#projects-sidemenu{background-color: rgba(200,200,200,.5); border-bottom-right-radius: 9px; border-bottom-left-radius: 9px;}
+.projects-detailcategory-section{ padding-top:20px;
+//.small-category{font-size:50%}
+.category-title{font-size:30px}
+ }
+.projects-actualdetail-section{background-color:rgba(130, 130, 130, 0.92); padding-top:15px; padding-bottom:15px;margin-bottom: 5px;
+   .detail-image{height: 300px;max-height: 300px;   width: 100%;}
+   dl{margin-left: 20px;}
+   dt{text-align:left}
+  
+}
+
+// Contact Form
+
+.contact-form{width:60%;
+  label{float:left}
+  input{width:100%}
+  textarea{width:100%}
+  .submit{width:25%}
+
+}
+
+.container_16 .grid_11 {
+    float: right;
+    width: 640px;
+}
+

@@ -1,12 +1,12 @@
 <h1>Blog Projects</h1>
-<table>
+<table  class="container rocky-center-aligned">
     <tr>
-        <th>Client Name</th>
-        <th>Delivery Method</th>
-        <th>Budget</th>
-        <th>Title</th>
-        <th>Location</th>
-        <th>Action</th>
+        <td>Client Name</th>
+        <td>Delivery Method</th>
+        <td>Budget</th>
+        <td>Title</th>
+        <td>Location</th>
+        <td>Action</th>
     </tr>
 
     <!-- Here is where we loop through our $Projects array, printing out Project info -->
@@ -19,7 +19,7 @@
         <td><?php echo $project['Project']['budget']; ?></td>
         <td><?php echo $project['Project']['title']; ?></td>
         <td><?php echo $project['Project']['location']; ?></td>
-        <td><?php echo $this->Html->link( 'Edit', array('action' => 'editProject', $project['Project']['id']) ) .  '  /  '  .  $this->Html->link( 'Delete', array('action' => 'deleteProject', $project['Project']['id']) ) ; ?></td>
+        <td><?php echo  $this->Html->link( 'View', array('action' => 'viewProject', $project['Project']['id']) ) .  '  /  ' . $this->Html->link( 'Edit', array('action' => 'editProject', $project['Project']['id']) ) .  '  /  '  .  $this->Html->link( 'Delete', array('action' => 'deleteProject', $project['Project']['id']) ) ; ?></td>
     </tr>
     <?php endforeach; ?>
     <?php unset($project); ?>
@@ -27,5 +27,5 @@
 
 <?php echo $this->Html->link(
     'Add Project',
-    array('controller' => 'projects', 'action' => 'add')
+    array('controller' => 'projectadmin', 'action' => 'add')
 ); ?>

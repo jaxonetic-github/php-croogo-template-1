@@ -31,7 +31,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->meta('author',    'Alonzo Jackson');
 		
        echo $this->Html->css("sass-bootstrap.min");
-		echo $this->Html->css("offcanvas");
+	//	echo $this->Html->css("offcanvas");
 		echo $this->Html->css("rocky");
 		
 		echo $this->fetch('meta');
@@ -39,28 +39,37 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->Html->script('jquery-2.0.2.min');
 		echo $this->Html->script('imgLiquid');
         echo $this->Html->script('sass-bootstrap.min');
+                echo $this->Html->script('dropdown');
+                echo $this->Html->script("rocky");
        echo $this->Html->css("jumbotron");
-		echo $this->Html->script('offcanvas');
+       echo $this->Html->css("960");
+		//echo $this->Html->script('offcanvas');
 		echo $this->fetch('script');
 		
 	?>
 </head>
-<body data-spy="scroll" data-offset="20" data-target="#sidebar">
+<body data-spy="scroll" data-offset="120" data-target="#sidebar">
 	
 	  
-    <div id="content" class="jumbotron">
-      <?php echo $this->fetch('header'); ?>
-        
+   
+      <div class="container_16">
+<?php echo $this->element('projectheader'); ?>
+      </div>  
     
             <p id="flash-message"><?php echo $this->Session->flash(); ?></p>
-
-            <?php echo $this->fetch('content'); ?>
-        </div>
+    
+<?php  echo $this -> Html -> image("projects/lightfade.png", array('alt' => '','class' => 'center-block')); ?>
+     <div class="container_16" >
+         <div class="row">
+             <div class="grid_5"   data-spy="affix" data-offset-bottom="400" >    <?php echo $this->fetch('sidebar'); ?></div> 
+             <div class="grid_11"> <?php echo $this->fetch('details'); ?></div>
+        </div><!--row-->
+    </div><!-- container -->
         
        <?php echo $this->element('footer_common'); ?>
 
         
-        <?php echo $this->fetch('bottomscript'); ?>
+       
         
     
     

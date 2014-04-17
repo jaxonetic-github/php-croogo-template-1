@@ -19,7 +19,7 @@ if ($this->request->params['action'] == 'admin_edit') {
 	$this->Html->addCrumb($this->request->data['Node']['title'], '/' . $this->request->url);
 }
 
-echo $this->Form->create('Node', array('url' => $formUrl));
+echo $this->Form->create('Node', array('url' => $formUrl, 'type' => 'file'));
 
 ?>
 <div class="row-fluid">
@@ -52,6 +52,9 @@ echo $this->Form->create('Node', array('url' => $formUrl));
 				echo $this->Form->input('excerpt', array(
 					'label' => __d('croogo', 'Excerpt'),
 				));
+                
+                echo $this->Form->input('filename', array('type' => 'file'));
+                
 				echo $this->Form->input('body', array(
 					'label' => __d('croogo', 'Body'),
 				));

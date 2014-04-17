@@ -3,31 +3,19 @@
 <?php  App::uses('AppController', 'Controller');
    
    
-class ProjectsController extends AppController {
+class ProjectAdminController extends AppController {
 
   public $helpers = array('Html', 'Link','Form', 'Session');
   public $components = array(
     'DebugKit.Toolbar' => array(/* array of settings */)
 );
 
-
-  var $layout = 'projects';
+  var $uses = "Project";
+  var $layout = 'contentAdmin';
   
   public function index(){
      
-    
-      $projects = $this->Project->find('all', array('order' => array('project_categories')));
-      $organizedResult = array();
-      $ctr = 0;
-      
-      //create 2 dim array based on CategoryNAme
-       foreach ($projects as $key => $value) {
-    
-           $organizedResult[$value['ProjectCategory']['category']][]=$value['Project'];
-          
-       }
-        
-       $this->set('projects', $organizedResult);
+     return $this->redirect(array('action' => 'listProjects')); 
   }
   
   public function listProjects(){
@@ -57,12 +45,11 @@ class ProjectsController extends AppController {
      
         if ($this->request->is('post')) {
             $this->Project->create();
-             $this->log($this->request->data);
            
             if ($this->Project->save($this->request->data)) {
                 $this->Session->setFlash(__('Your post has been saved.'));
                 $this->log("Save work!");
-               return $this->redirect(array('action' => 'index'));
+               return $this->redirect(array('action' => 'listProjects'));
             }
             $this->Session->setFlash(__('Unable to add your post.'));
         }
@@ -91,7 +78,7 @@ class ProjectsController extends AppController {
             $this->Project->id = $id;
             if ($this->Project->save($this->request->data)) {
                 $this->Session->setFlash(__('Your post has been updated.'));
-                return $this->redirect(array('action' => 'index'));
+                return $this->redirect(array('action' => 'listProjects'));
             }
             $this->Session->setFlash(__('Unable to update your post.'));
         }

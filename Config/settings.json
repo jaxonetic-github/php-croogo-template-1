@@ -1,17 +1,17 @@
 {
     "Site": {
         "acl_plugin": "Acl",
-        "email": "you@your-site.com",
+        "email": "jaxonetic@gmail.com",
         "feed_url": "",
         "locale": "eng",
         "status": 1,
-        "tagline": "A CakePHP powered Content Management System.",
+        "tagline": "RCB Content Management System.",
         "theme": "Rocky",
         "timezone": 0,
-        "title": "Croogo"
+        "title": "Rocky Coast Builders, Inc"
     },
     "Hook": {
-        "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Wysiwyg,Ckeditor,debug_kit,Example"
+        "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Ckeditor"
     },
     "Croogo": {
         "installed": 1,

@@ -94,17 +94,7 @@ pursue growth and learning, and continue to be passionate in the work we perform
    <div class="jumbotron">
       <div class="container">
        
-       <ul id="home-news-banneritems" class="list-inline">
- 		 <li class="img-cell"><div class="thumbnail"><img src="img/home/news.png" alt = 'news' /></div></li>
- 		 <li class="text-cell"> <p class="news-banner-title">Rocky Coast awarded zillion dollar contract</p>
- 		 	  <p class="news-banner-text">New 22 Story Cast in Place Concrete Structure set to Ground Break in 2016</p>
- 		 	 
- 		 </li>
- 		 <li class="nav-date-cell"> <ul class="list-unstyled"><li><div><span class="glyphicon glyphicon-chevron-left"></span><span class="glyphicon glyphicon-chevron-right"></span></div></li>
- 		 	      <li class="bottomdate"><p class="news-banner-date-text pull-right">Wed, Nov 13, 2013</p></li>
- 		     </ul>
- 		 </li>
-	   </ul>
+      <?php echo $this->element('awardsBanner', array('nodes'=>$nodes)); ?>
       </div>
     </div>
 

@@ -1,6 +1,9 @@
 
 
 <?php 
+App::uses('Folder', 'Utility');
+App::uses('File', 'Utility');
+
 App::uses('AppModel', 'Model');
 class Project extends AppModel {
     public $useTable = 'project';
@@ -15,6 +18,10 @@ class Project extends AppModel {
          );
     
  
+/* Upload Directory relative to WWW_ROOT
+ * @param string
+ */
+public $uploadDir = 'uploads';
    
    
    // ex. 'conditions' => array('Article.status !=' => 'pending'),
@@ -35,20 +42,54 @@ class Project extends AppModel {
   **********/
   
 /**
- * Upload Directory relative to WWW_ROOT
- * @param string
- */
-public $uploadDir = 'uploads';
 
 /**
  * Process the Upload
- * @param array $check
+ * @param array $check: the request data  with uploaded file info
+ * 
+ * 
+ * $check = Array
+(
+    [Project] => Array
+        (
+            [category] => 3
+            [client_name] => Pac Man
+            [delivery_method] => Power Pellet
+            [budget] => 23k
+            [title] => The Chomper
+            [location] => Here
+            [summary] => 
+            [filename] => Array
+                (
+                    [name] => unitysnap.png
+                    [type] => image/png
+                    [tmp_name] => /private/var/folders/fz/q0bn8cq91mz20h1cys24vx4c0000gn/T/phpNqPVQG
+                    [error] => 0
+                    [size] => 647566
+                )
+
+        )
+
+)
  * @return boolean
  */
 public function processUpload($check=array()) {
-    
-    $this->log("Processing fileupload");
-    debug("Debug : Processing fileupload");
+
+
+
+/*
+ * Getting the Project Category string.  I'm doing this, this way,  for now.  
+ * 
+ * Todo:find a more elegant way
+ */ 
+ $projCategory = ClassRegistry::init('ProjectCategory');
+$proj = $projCategory-> findById( $this->data['Project']['category'] );
+
+$categoryString = strtolower( $proj['ProjectCategory']['category']);
+
+//the $categoryString will be used as directory so remove nonalphnumeric characters
+ $categoryString = preg_replace('/[^a-zA-Z0-9]/', '', $categoryString);
+
     // deal with uploaded file
     if (!empty($check['filename']['tmp_name'])) {
 
@@ -57,20 +98,25 @@ public function processUpload($check=array()) {
             return FALSE;
         }
 
+        $filePath = WWW_ROOT . $this->uploadDir . DS . "projects" . DS . $categoryString ;
+        
         // build full filename
-        $filename = WWW_ROOT . $this->uploadDir . DS . Inflector::slug(pathinfo($check['filename']['name'], PATHINFO_FILENAME)).'.'.pathinfo($check['filename']['name'], PATHINFO_EXTENSION);
+        $fileNameAndPath = $filePath . DS . Inflector::slug(pathinfo($check['filename']['name'], PATHINFO_FILENAME)).'.'.pathinfo($check['filename']['name'], PATHINFO_EXTENSION);
+        $fileName =  Inflector::slug(pathinfo($check['filename']['name'], PATHINFO_FILENAME)).'.'.pathinfo($check['filename']['name'], PATHINFO_EXTENSION);
+        //Ensure target folder
+        $folder = new Folder($filePath, true, 0777);
+        $file = new File($check['filename']['tmp_name'], false);
 
-        // @todo check for duplicate filename
-
-        // try moving file
-        if (!move_uploaded_file($check['filename']['tmp_name'], $filename)) {
-            return FALSE;
-
-        // file successfully uploaded
-        } else {
-            // save the file path relative from WWW_ROOT e.g. uploads/example_filename.jpg
-            $this->data[$this->alias]['filepath'] = str_replace(DS, "/", str_replace(WWW_ROOT, "", $filename) );
-        }
+              if($file->copy($fileNameAndPath))
+              {
+                  $this->data[$this->alias]['filepath'] = str_replace(DS, "/", str_replace(WWW_ROOT, "", $fileNameAndPath) );
+              }
+      
+      //inserting the path to the image from WWW_ROOT
+        $this->data['Project']['image_name'] = $this->uploadDir . DS . "projects" . DS . $categoryString . DS . $fileName ;
+      
+          $file->close();
+       
     }
 
     return TRUE;
@@ -123,14 +169,14 @@ public function beforeSave($options = array()) {
             ),
             // http://book.cakephp.org/2.0/en/models/data-validation.html#Validation::mimeType
             'mimeType' => array(
-                'rule' => array('mimeType', array('image/gif','image/png','image/jpg','image/jpeg','application/pdf')),
-                'message' => 'Invalid file, only images or pdf allowed',
+                'rule' => array('mimeType', array('image/gif','image/png','image/jpg','image/jpeg')),
+                'message' => 'Invalid file type, only images allowed.',
                 'required' => FALSE,
                 'allowEmpty' => TRUE,
             ),
              'extension'=> array(            
-                'rule'    => array(   'extension',array('gif', 'jpeg', 'png', 'jpg, pdf')),
-                  'message' => 'Invalid file, only images or pdf allowed',
+                'rule'    => array(   'extension',array('gif', 'jpeg', 'png', 'jpg')),
+                  'message' => 'Invalid file, only gif, jpeg, png images allowed.',
             ),
             // custom callback to deal with the file upload
             'processUpload' => array(

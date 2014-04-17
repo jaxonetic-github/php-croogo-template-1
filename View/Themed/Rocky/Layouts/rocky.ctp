@@ -37,7 +37,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->Html->script('jquery-2.0.2.min');
-		echo $this->Html->script('imgLiquid');
+         
 		echo $this->fetch('script');
 		?>
 </head>
@@ -45,19 +45,26 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
     
    
     
-	<div id="content" class="jumbotron">
+	
 	   <?php echo $this->element('header'); ?>		
-    
-			<p id="flash-message"><?php echo $this->Session->flash(); ?></p>
+       <div id="flashMessages" class="container rocky-center-aligned">
+           <?php echo $this->Session->flash(); ?></p>
+       </div>
+			
 
 			<?php echo $this->fetch('content'); ?>
-    </div>
+   
 	
 		
 		<?php echo $this->element('footer_common'); ?>
 
+	<?php 	
 		
-		<?php echo $this->fetch('bottomscript'); ?>
+echo $this->Html->script("jquery.cookie");
+        echo $this->Html->script('jquery.cycle2.js');
+        echo $this->Html->script('imgLiquid');
+         echo $this->Html->script('rocky');
+		echo $this->fetch('bottomscript'); ?>
 		
 	
 	

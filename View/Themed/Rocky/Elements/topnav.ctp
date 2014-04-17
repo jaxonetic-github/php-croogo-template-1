@@ -1,52 +1,11 @@
 
 
-
 <?php
  echo $this->Html->script("jquery.cookie");
- echo $this->Html->script('rocky');
  
-$this -> Html -> scriptBlock("
-jQuery(function($) {
-                   
-            /*
-             *  if cookie activeNav cookie doesn't exist set home menuitem active
-             *
-             console.log($('.active').html());   
-             console.log($.cookie('activeNav'));
-           if($.cookie('activeNav')){}
-           else{
-               $('.rockynav-home').addClass('active');
-               $.cookie('activeNav', 'home');
-           }
-       
-   /*
-    * Handles menu click events
-    */
-                   $('.rocky-menuitem').click(function(evt){
-                        $('.active').toggleClass('active');
-                        
-                        //get the list of classes for this element
-                        var classList = $(this).attr('class').split(/\s+/);
-                        
-                        //go through them(should only be about 2-3) and find the one that starts with rockynav-
-                        $(classList).each(function(index){
-                           //I want the text after [rockynav-] 
-                         
-                           if(classList[index].substring(0, 9)==='rockynav-'){
-                               console.log(classList[index].substring(9));
-                                    
-                               $('#content').load(classList[index].substring(9));
-                                //keeping track of the active menuitem as we navigate pages
-                                $.cookie('activeNav', classList[index].substring(9));
-                           }
-                        });
-                        $(this).addClass('active');
-                        
-                       
-
-                    });
- });          
-", array('inline' => false));
+ //menu active/inactive javascript
+ echo $this->Html->script('menu');
+ 
 ?>
 
 
@@ -65,8 +24,8 @@ jQuery(function($) {
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="top-navbar-collapse">
     <ul class="nav   navtext  nav-justified ">
-      <li class="active rocky-menuitem rockynav-home"><a href="#">home</a></li>
-      <li class="dropdown">
+      <li class="rocky-menuitem rockynav-home"><?php echo $this->Html->link('home','/'); ?></li>
+      <li class="dropdown rockynav-company">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">company <b class="caret"></b></a>
         <ul class="dropdown-menu">
           <li class="rocky-menuitem"><a href="#">about us</a></li>
@@ -76,9 +35,9 @@ jQuery(function($) {
           <li class="rocky-menuitem"><a href="#">testimonials</a></li>
         </ul>
       </li>
-      <li class=""><a href="projects">projects</a></li>
-      <li class=""><a href="blog">news</a></li>
-      <li class=""><a href="contactus">contact&nbsp;us</a></li>
+      <li class="rocky-menuitem rockynav-projects"><?php echo $this->Html->link('projects','/projects'); ?></li>
+      <li class="rocky-menuitem rockynav-news"><?php echo $this->Html->link('news','/blog'); ?></li>
+      <li class="rocky-menuitem rockynav-message"><?php echo $this->Html->link('contact us','/contactPage'); ?></li>
     </ul>
    </div>
 </nav>
