@@ -4,7 +4,7 @@
   width: 300px;
   height: 200px;
 }
-
+//************   general  
 .margined-paragraph{    margin-bottom: 30px;
     margin-left: auto;
     margin-right: auto;
@@ -30,7 +30,14 @@
 }
 
 .rocky-center-aligned{text-align:center}
+//***********  endgeneral
 
+//*********   overriding bootstrap 
+.navbar-default {
+    background-color: transparent;
+    border: none;
+    
+}
 
 .col-md-9 {
     float: right !important;
@@ -38,8 +45,9 @@
 .col-md-5 {
     width: 66.667% !important;
 }
-#header-search{position: absolute; right: 0;}
-.header-listitem{vertical-align:top}
+
+//**************   home
+
 body {
     background-image: url("img/bkgrnd_print.png"); background-size: cover; background-position: center top;
     color: #EEEEEE;
@@ -90,13 +98,8 @@ footer{text-align:center}
 }//body
 
 
-//overriding bootstrap 
-.navbar-default {
-    background-color: transparent;
-    border: none;
-    
-}
 
+//***********  projects   ************/
 
 #sidebar{
    .has-thick-bottom-border{border-bottom: 10px solid rgba(200, 200, 200, 0.5); line-height: 2.5;}
@@ -160,7 +163,7 @@ footer{text-align:center}
   
 }
 
-// Contact Form
+//********* Contact Form
 
 .contact-form{width:60%;
   label{float:left}
