@@ -11,7 +11,7 @@
         "title": "Rocky Coast Builders, Inc"
     },
     "Hook": {
-        "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Ckeditor"
+        "bootstraps": "Settings,Comments,Contacts,Nodes,Meta,Menus,Users,Blocks,Taxonomy,FileManager,Ckeditor,DebugKit"
     },
     "Croogo": {
         "installed": 1,

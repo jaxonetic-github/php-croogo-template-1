@@ -1,8 +1,7 @@
-<h2>About Us</h2>
+<div class="container">
+<h3 class="rocky-center-aligned">WHO WE ARE</h3>
 
-<h3>WHO WE ARE</h3>
-
-<p>Rocky Coast Builders is a family owned and family run construction company that was 
+<p class="margined-paragraph">Rocky Coast Builders is a family owned and family run construction company that was 
 
 originally founded in 1979 in Salt Lake City and started out as a small framer of custom homes. 
 
@@ -31,7 +30,7 @@ Steve’s long time Vice President, partnered with Steve’s daughter, Mandi, an
 Chris, and purchased the company from Steve.</p>
 
 
-<p>Much of our experience and expertise is in public works, including K-12 school districts, 
+<p class="margined-paragraph">Much of our experience and expertise is in public works, including K-12 school districts, 
 
 community colleges and universities, libraries, city halls and military work. These projects have 
 
@@ -45,7 +44,7 @@ private projects such as multi-family apartments and condominiums and many other
 
 properties.</p>
 
-<p>We are recognized as one of the premier contactors in San Diego, Riverside and Orange counties 
+<p class="margined-paragraph">We are recognized as one of the premier contactors in San Diego, Riverside and Orange counties 
 
 because of our focus on providing a quality product. In 2008, we were named the AGC of 
 
@@ -62,3 +61,4 @@ earlier completion date. This is accomplished by working with integrity, incorpo
 technologies, maintaining long term, hard working and conscientious employees and above all 
 
 working safely.</p>
+</div>

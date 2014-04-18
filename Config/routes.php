@@ -34,7 +34,10 @@ Router::connect('/', array('controller' => 'rocky', 'action' => 'index'));
 Router::connect('/contactpage', array('controller' => 'contactPage', 'action' => 'index'));
 
 Router::connect('/contactpage/save', array('controller' => 'contactPage', 'action' => 'save'));
-
+Router::connect('/aboutus', array('controller' => 'pages', 'action' => 'aboutus'));
+Router::connect('/awards', array('controller' => 'pages', 'action' => 'awards'));
+Router::connect('/safety', array('controller' => 'pages', 'action' => 'safety'));
+Router::connect('/community', array('controller' => 'pages', 'action' => 'community'));
 CakePlugin::routes();
 Router::parseExtensions('json', 'rss');
 

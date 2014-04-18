@@ -24,20 +24,20 @@
   <!-- Collect the nav links, forms, and other content for toggling -->
   <div class="collapse navbar-collapse" id="top-navbar-collapse">
     <ul class="nav   navtext  nav-justified ">
-      <li class="rocky-menuitem rockynav-home"><?php echo $this->Html->link('home','/'); ?></li>
-      <li class="dropdown rockynav-company">
+      <li class="rocky-menuitem rocky-menuitem-header rockynav-home"><?php echo $this->Html->link('home','/'); ?></li>
+      <li class="rocky-menuitem-header dropdown rockynav-company">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">company <b class="caret"></b></a>
-        <ul class="dropdown-menu">
-          <li class="rocky-menuitem"><a href="#">about us</a></li>
-          <li class="rocky-menuitem"><a href="#">awards</a></li>
-          <li class="rocky-menuitem"><a href="#">safety</a></li>
-          <li class="rocky-menuitem"><a href="#">community</a></li>
-          <li class="rocky-menuitem"><a href="#">testimonials</a></li>
+        <ul class="dropdown-menu" role="menu">
+          <li class="rocky-menuitem rockynav-aboutus"><?php echo $this->Html->link('about us','/aboutus'); ?></li>
+          <li class="rocky-menuitem rockynav-awards"><?php echo $this->Html->link('awards','/awards'); ?></li>
+          <li class="rocky-menuitem rockynav-news"><?php echo $this->Html->link('safety','/safety'); ?></li>
+          <li class="rocky-menuitem rockynav-community"><?php echo $this->Html->link('community','/community'); ?></li>
+          <li class="rocky-menuitem rockynav-testimonials"><?php echo $this->Html->link('testimonials','/testimonials'); ?></li>
         </ul>
       </li>
-      <li class="rocky-menuitem rockynav-projects"><?php echo $this->Html->link('projects','/projects'); ?></li>
-      <li class="rocky-menuitem rockynav-news"><?php echo $this->Html->link('news','/blog'); ?></li>
-      <li class="rocky-menuitem rockynav-message"><?php echo $this->Html->link('contact us','/contactPage'); ?></li>
+      <li class="rocky-menuitem rockynav-projects  rocky-menuitem-header "><?php echo $this->Html->link('projects','/projects'); ?></li>
+      <li class="rocky-menuitem rockynav-news  rocky-menuitem-header "><?php echo $this->Html->link('news','/blog'); ?></li>
+      <li class="rocky-menuitem rockynav-message   rocky-menuitem-header "><?php echo $this->Html->link('contact us','/contactPage'); ?></li>
     </ul>
    </div>
 </nav>

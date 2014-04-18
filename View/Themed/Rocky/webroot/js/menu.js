@@ -2,9 +2,26 @@
  * @author Alonzo
  */
 jQuery(function($) {
-          
+
+  $(document).on('mouseleave', '.rocky-menuitem-header', function() {
+
+   //if the company dropdown is open, close it
+  if( $(".rockynav-company").hasClass("open") ){
+  	//hide/lse the dropdown
+	 $(".rocky-menuitem-header").find('.dropdown-toggle').dropdown('toggle');
+	 
+	 //if you don't blur the dropdown, the bootstrap css won't remove the hightlight
+	 $(".rocky-menuitem-header").find('.dropdown-toggle').blur().val('');
+  } 
   
+  })
+
+
 	$(document).on('click', '.rocky-menuitem', function() {
+		
+		
+  // 	$('.rocky-menuitem').removeClass('active-mainnav-item');
+   
 		//get the list of classes for this element
 		var classList = $(this).attr('class').split(/\s+/);
 

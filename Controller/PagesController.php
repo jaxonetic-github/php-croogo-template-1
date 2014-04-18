@@ -38,6 +38,30 @@ class PagesController extends AppController {
  */
 	public $uses = array();
 	public $helpers = array('Html');
+    
+    var $layout = 'rocky';
+    
+    
+    
+    
+    public function aboutus(){}
+    public function safety(){}
+    public function awards(){}
+    
+    public function community(){
+         $this->loadModel("CommunityInvolvement");
+         $this->loadModel("CommunityLogo");
+        //get the the community notices
+          $notices = $this->CommunityInvolvement->find('all');
+     
+        //get the icons
+          $logos = $this->CommunityLogo->find('all');
+     
+     $this->set('logos', $logos);
+     $this->set('notices', $notices);
+        
+    }
+    
 /**
  * Displays a view
  *

@@ -1,16 +1,4 @@
 
-<?php
-
-  $this->Html->scriptBlock("
-      jQuery(function($) {
-      $('.imgLiquidFill').imgLiquid({
-        fill: true
-      });    
-      console.log('sdfafdsafssd')
-});
-         ",array('inline'=>false));
-?>
-
    
     <!-- Home Page Paragraph -->
    <div class="jumbotron">
@@ -102,8 +90,7 @@ pursue growth and learning, and continue to be passionate in the work we perform
 
    <?php $this->start('bottomscript');
 
-		echo $this->Html->script('dropdown');
-		echo $this->Html->script('carousel');
+	
 		//echo $this->Html->script('rocky');
 
 

@@ -5,6 +5,11 @@
   height: 200px;
 }
 
+.margined-paragraph{    margin-bottom: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 66%;}
+
 .carousel-inner {
     text-align: center;
 
@@ -18,14 +23,10 @@
 .capitalized{text-transform:capitalize;}
 .active-mainnav-item, .active{background-color:rgba(210,210,210,.8);}
 .rocky-img-responsive {
-    display: block;
-    height: auto;
-    width: 55%;
+    display: block;  height: auto;   width: 55%;    margin: auto;
 }
 .rocky-project-img-responsive {
-    display: block;
-    height: auto;
-    width: 110%;
+    display: block; height: auto;   width: 110%;    margin: auto;
 }
 
 .rocky-center-aligned{text-align:center}
@@ -88,7 +89,7 @@ footer{text-align:center}
 
 }//body
 
-.rockytopnav{margin-top:100px;}
+
 //overriding bootstrap 
 .navbar-default {
     background-color: transparent;
@@ -174,3 +175,26 @@ footer{text-align:center}
     width: 640px;
 }
 
+//********      Community    ********//
+#community-box{
+.rocky-thumb{  img{ max-height:250px;}}
+.description-box{vertical-align:top;}
+}
+
+#community-logos{text-align: center; width:90%;padding-bottom: 67px;
+.logo-img-frame{display: inline-table;max-width: 200px;
+img{border-radius:6px}}
+dt{width:33%}
+dd{width:66%}
+}
+
+
+
+
+//*********        top navbar     *********//
+.rockytopnav{margin-top:100px;
+   .dropdown-menu{   margin-top: -1px; background-color: lightslategrey;}
+   .rocky-dropdownmenulevelone-active{ background-color: #EEEEEE;}
+  // .nav .open > a,  .nav .open > a:hover {background-color: #EEEEEE;}
+  // .nav .open > a:focus{background-color:transparent}
+}

@@ -1,14 +1,5 @@
 <?php
 
-$this -> Html -> scriptBlock("
-jQuery(function($) {
-$('.imgLiquidFill').imgLiquid({
-fill: true
-});
-console.log('sdfafdsafssd')
-});
-", array('inline' => false));
-
 
 
 $this->start('sidebar');

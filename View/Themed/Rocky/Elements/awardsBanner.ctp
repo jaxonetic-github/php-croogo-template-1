@@ -1,13 +1,4 @@
 
- 
-<?php
-
-  $this->Html->scriptBlock("
-      jQuery(function($) {
-   
-        });
-         ",array('inline'=>false));
-?>
 
     <div id="site-news" class="cycle-slideshow"  data-cycle-fx="fade"  data-cycle-timeout="0" data-cycle-slides="> ul" data-cycle-prev="#prev"
         data-cycle-next="#next">

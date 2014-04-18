@@ -28,6 +28,7 @@
             '/croogo/js/jquery/supersubs', 'imgLiquid',
             '/croogo/js/theme',
         ));
+         echo $this->Html->script('dropdown');
         echo $this->Blocks->get('css');
         echo $this->Blocks->get('script');
         

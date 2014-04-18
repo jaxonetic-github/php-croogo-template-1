@@ -60,9 +60,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
 	<?php 	
 		
-echo $this->Html->script("jquery.cookie");
+//echo $this->Html->script("jquery.cookie");
         echo $this->Html->script('jquery.cycle2.js');
         echo $this->Html->script('imgLiquid');
+            echo $this->Html->script('dropdown');
+        echo $this->Html->script('carousel');
+      //  echo $this->Html->script('menu');
          echo $this->Html->script('rocky');
 		echo $this->fetch('bottomscript'); ?>
 		
