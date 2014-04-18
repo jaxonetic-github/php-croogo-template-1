@@ -101,6 +101,13 @@ footer{text-align:center}
 
 //***********  projects   ************/
 
+#project-content.container_16 .grid_11 {
+    float: right;
+    width: 640px;
+
+
+}
+
 #sidebar{
    .has-thick-bottom-border{border-bottom: 10px solid rgba(200, 200, 200, 0.5); line-height: 2.5;}
   .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
@@ -173,10 +180,6 @@ footer{text-align:center}
 
 }
 
-.container_16 .grid_11 {
-    float: right;
-    width: 640px;
-}
 
 //********      Community    ********//
 #community-box{

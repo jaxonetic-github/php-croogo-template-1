@@ -59,7 +59,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
             <p id="flash-message"><?php echo $this->Session->flash(); ?></p>
     
 <?php  echo $this -> Html -> image("projects/lightfade.png", array('alt' => '','class' => 'center-block')); ?>
-     <div class="container_16" >
+     <div id="project-content" class="container_16" >
          <div class="row">
              <div class="grid_5" >    <?php echo $this->fetch('sidebar'); ?></div> 
              <div class="grid_11"> <?php echo $this->fetch('details'); ?></div>
