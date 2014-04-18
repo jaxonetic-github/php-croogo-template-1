@@ -41,6 +41,8 @@
 		<div id="header" class="container_16">
 			<div class="grid_16">
 				
+       <?php echo $this->element('header'); ?>      
+
 			</div>
 			<div class="clear"></div>
 		</div>
@@ -60,8 +62,10 @@
 
 			<div class="clear"></div>
 		</div>
-TETESTESTS
+
 		<div id="footer">
+		    
+		   <?php echo $this->element('footer_common'); ?> 
 			<div class="container_16">
 				<div class="grid_8 left">
 					Powered by <a href="http://www.croogo.org">Croogo</a>.
