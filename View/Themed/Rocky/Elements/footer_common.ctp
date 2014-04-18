@@ -39,12 +39,13 @@
 
   <div class="collapse navbar-collapse rocky-center-aligned" id="footer-navbar-collapse-1">
     <ul class="list-inline  rocky-center-aligned">
-      <li class="active"><a href="#">home</a></li>
-      <li><a href="#">news</a></li>
-      <li><a href="#">about&nbsp;us</a></li>
-      <li><a href="#">projects</a></li>
+         <li><?php echo $this->Html->link('home','/'); ?></li>
+      <li><?php echo $this->Html->link('about us','/aboutus'); ?></li>
+      <li><?php echo $this->Html->link('news','/blog'); ?></li>
+      <li><?php echo $this->Html->link('about us','/aboutus'); ?></li>
+      <li><?php echo $this->Html->link('projects','/projects'); ?></li>
       <li><a href="#">services</a></li>
-      <li><a href="#">contact&nbsp;us</a></li>
+      <li><?php echo $this->Html->link('contact us','/contactPage'); ?></li>
       <li><a href="#">employee&nbsp;login</a></li>
     </ul>
    </div>
