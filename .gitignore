@@ -7,7 +7,7 @@ build
 dist
 tags
 tmp/*/*
-View/Themed/Rocky/webroot/.sass-cache
+View/Themed/Rocky/webroot/.sass-cache/*
 
 tmp/*
 [Cc]onfig/core.php
