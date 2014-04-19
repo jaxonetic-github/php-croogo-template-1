@@ -45,24 +45,29 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 </head>
 <body>
     
-  <?php echo $this->element('projectheader'); ?>    
-    <div  class="jumbotron">
-      
+  <?php echo $this->element('header'); ?>    
 
-        
-    
-            <p id="flash-message"><?php echo $this->Session->flash(); ?></p>
+ 
+            <div id="content-container" class="container-fluid">
+                <div class="row-fluid">
+                    <div id="admin-login" class="rocky-center-aligned">
+                    <?php
+                        echo $this->Layout->sessionFlash();
+                        echo $this->fetch('content');
+                    ?>
+                    </div>
+                </div>
+            </div>
             
-      <div id="content" class="container rocky-center-aligned">
-           <p id="flash-message"><?php echo $this->Session->flash(); ?></p>
-            <?php echo $this->fetch('content'); ?>
-      </div>
-        </div>
-        
+            
        <?php echo $this->element('footer_common'); ?>
 
         
-        <?php echo $this->fetch('bottomscript'); ?>
+        <?php 
+                 echo $this->Html->script('dropdown');
+                  echo $this->Html->script('rocky');
+                echo $this->fetch('bottomscript');
+          ?>
         
     
     

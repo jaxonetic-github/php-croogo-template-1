@@ -7,7 +7,7 @@ Configure::write('Site.acl_plugin', 'Acl');
 /**
  * Admin theme
  */
-//Configure::write('Site.admin_theme', 'sample');
+Configure::write('Site.admin_theme', 'rocky');
 
 /**
  * Cache configuration

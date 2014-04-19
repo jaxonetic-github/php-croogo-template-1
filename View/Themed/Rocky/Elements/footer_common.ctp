@@ -46,7 +46,7 @@
       <li><?php echo $this->Html->link('projects','/projects'); ?></li>
       <li><a href="#">services</a></li>
       <li><?php echo $this->Html->link('contact us','/contactPage'); ?></li>
-      <li><a href="#">employee&nbsp;login</a></li>
+      <li><?php echo $this->Html->link('employee login','/admin/users/users/login'); ?></li>
     </ul>
    </div>
    </nav>

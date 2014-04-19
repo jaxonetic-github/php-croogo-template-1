@@ -57,7 +57,7 @@
         </div>
 -->
         <div id="main" class="container_16">
-            <div id="content" class="grid_11">
+            <div id="content" class="grid_11"><p>themed admin</p>
             <?php
                 echo $this->Layout->sessionFlash();
                 echo $content_for_layout;

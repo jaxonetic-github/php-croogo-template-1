@@ -386,3 +386,38 @@ body footer {
 .rockytopnav .rocky-dropdownmenulevelone-active {
   background-color: #EEEEEE;
 }
+
+/* line 210, ../sass/rocky.scss */
+#admin-login {
+  margin: 120px auto 0;
+  max-width: 352px;
+}
+/* line 213, ../sass/rocky.scss */
+#admin-login .box {
+  background-color: #F5F5F5;
+  border: 1px solid #DDDDDD;
+  border-radius: 2px;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+  margin-bottom: 10px;
+  min-height: 20px;
+  padding: 10px;
+}
+/* line 221, ../sass/rocky.scss */
+#admin-login .box .radio, #admin-login .box .checkbox {
+  min-height: 20px;
+  padding-left: 20px;
+}
+/* line 222, ../sass/rocky.scss */
+#admin-login .box .radio input[type="radio"], #admin-login .box .checkbox input[type="checkbox"] {
+  float: none;
+  margin-left: -20px;
+  margin-right: 35px;
+}
+/* line 223, ../sass/rocky.scss */
+#admin-login .box input[type="radio"], #admin-login .box input[type="checkbox"] {
+  width: auto;
+}
+/* line 226, ../sass/rocky.scss */
+#admin-login .box label {
+  color: #428BCA;
+}

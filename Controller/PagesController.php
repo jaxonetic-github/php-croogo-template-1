@@ -62,6 +62,8 @@ class PagesController extends AppController {
         
     }
     
+  
+    
 /**
  * Displays a view
  *
