@@ -29,7 +29,6 @@ App::uses('CroogoRouter', 'Croogo.Lib');
 
 Router::connect('/projects', array('controller' => 'projects', 'action' => 'index'));
 Router::connect('/', array('controller' => 'rocky', 'action' => 'index'));
-//Router::connect('/contactus', array('controller' => 'contacts', 'action' => 'index'));
 //Router::connect('/contacts/save', array('controller' => 'contacts', 'action' => 'save'));
 Router::connect('/contactpage', array('controller' => 'contactPage', 'action' => 'index'));
 
@@ -38,6 +37,12 @@ Router::connect('/aboutus', array('controller' => 'pages', 'action' => 'aboutus'
 Router::connect('/awards', array('controller' => 'pages', 'action' => 'awards'));
 Router::connect('/safety', array('controller' => 'pages', 'action' => 'safety'));
 Router::connect('/community', array('controller' => 'pages', 'action' => 'community'));
+
+
+Router::connect('/registered', array('controller' => 'registeredAdmin', 'action' => 'index'));
+Router::connect('/projects-regAdmin', array('controller' => 'projectadmin', 'action' => 'index'));
+Router::connect('/community-regAdmin', array('controller' => 'communityadmin', 'action' => 'index'));
+
 
 CakePlugin::routes();
 Router::parseExtensions('json', 'rss');

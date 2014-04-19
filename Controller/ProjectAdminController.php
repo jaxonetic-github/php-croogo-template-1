@@ -11,7 +11,7 @@ class ProjectAdminController extends AppController {
 );
 
   var $uses = "Project";
-  var $layout = 'contentAdmin';
+  var $layout = 'admin_login';
   
   public function index(){
      

@@ -392,11 +392,6 @@ body footer {
   background-color: #EEEEEE;
 }
 
-/* line 212, ../sass/rocky.scss */
-#admin-login {
-  margin: 120px auto 0;
-  max-width: 352px;
-}
 /* line 215, ../sass/rocky.scss */
 #admin-login .box {
   background-color: #F5F5F5;

@@ -36,6 +36,7 @@ class PagesController extends AppController {
  *
  * @var array
  */
+ public $components = array('Auth');
 	public $uses = array();
 	public $helpers = array('Html');
     
@@ -56,7 +57,13 @@ class PagesController extends AppController {
      
         //get the icons
           $logos = $this->CommunityLogo->find('all');
-     
+          
+          $isAdmin = $this->Auth->loggedIn() && $this->Auth->user('role_id')<=2;
+          if($isAdmin)
+          {
+              $this->layout = "admin_login";
+          }
+     $this->set('isAdmin', $isAdmin);
      $this->set('logos', $logos);
      $this->set('notices', $notices);
         

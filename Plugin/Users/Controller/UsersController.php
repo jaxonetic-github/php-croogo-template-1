@@ -259,8 +259,16 @@ class UsersController extends UsersAppController {
 		$this->layout = "admin_login";
 		if ($this->request->is('post')) {
 			Croogo::dispatchEvent('Controller.Users.beforeAdminLogin', $this);
+           
 			if ($this->Auth->login()) {
 				Croogo::dispatchEvent('Controller.Users.adminLoginSuccessful', $this);
+                /*
+                 * Forwarding Registered Users to Registered Admin screens
+                 */
+                if(  $this->log($this->Auth->user("role_id")) == 2   )
+                {
+                    $this->redirect($this->Auth->redirect("/registered"));
+                }
 				$this->redirect($this->Auth->redirect());
 			} else {
 				Croogo::dispatchEvent('Controller.Users.adminLoginFailure', $this);
