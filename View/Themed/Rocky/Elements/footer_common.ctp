@@ -1,8 +1,8 @@
 <!----------------------------------    FOOTER        -------------------->
-		
+	<div id="bottom-content">
       <!-- alliances section -->
-     <div class="jumbotron">
-      <div class="container">
+
+      <div class="container_16">
       	<ul id="home-news" class="list-inline  rocky-center-aligned">
  		 <li><?php  echo $this->Html->image("home/sbe_logo.png", array('alt' => 'SBE')); ?></li>
  		 <li><?php  echo $this->Html->image("home/agc_logo.png", array('alt' => 'AGC')); ?></li>
@@ -11,11 +11,10 @@
 
       </div>
    
-  </div>
+ 
   
     <!-- horizontal bar -->
-   <div class="jumbotron">
-      <div class="container">
+      <div class="container_16">
        
 	   <div class="horizontal-bar"></div>
       </div>
@@ -60,5 +59,5 @@
 		<P>* Safety is a team effort *</P>
       </footer>
    </div>
-   
+   </div>    
    <!-----------------  FOOTER   ------------------->
