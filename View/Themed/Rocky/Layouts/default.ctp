@@ -57,7 +57,7 @@
         </div>
 -->
         <div id="main" class="container_16">
-            <div id="content" class="grid_11"><p>themed admin</p>
+            <div id="content" class="grid_11">
             <?php
                 echo $this->Layout->sessionFlash();
                 echo $content_for_layout;
@@ -87,6 +87,7 @@
         </div>
     </div>
     <?php
+     echo $this->Html->script('dropdown');
         echo $this->Blocks->get('scriptBottom');
         echo $this->Js->writeBuffer();
     ?>

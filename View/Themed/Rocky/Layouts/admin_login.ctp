@@ -64,8 +64,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 
         
         <?php 
-                 echo $this->Html->script('dropdown');
-                  echo $this->Html->script('rocky');
+                 echo $this->Html->script('sass-bootstrap.min');
+                 echo $this->Html->script('rocky');
                 echo $this->fetch('bottomscript');
           ?>
         

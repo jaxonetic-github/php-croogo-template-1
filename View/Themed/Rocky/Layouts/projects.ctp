@@ -38,9 +38,9 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		echo $this->fetch('css');
 		echo $this->Html->script('jquery-2.0.2.min');
 		echo $this->Html->script('imgLiquid');
-        echo $this->Html->script('sass-bootstrap.min');
-                echo $this->Html->script('dropdown');
-                echo $this->Html->script("rocky");
+        
+    
+         
        echo $this->Html->css("jumbotron");
        echo $this->Html->css("960");
 		//echo $this->Html->script('offcanvas');
@@ -69,7 +69,12 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
        <?php echo $this->element('footer_common'); ?>
 
         
-       
+           <?php 
+              echo $this->Html->script('sass-bootstrap.min');
+                  echo $this->Html->script('rocky');
+                echo $this->fetch('bottomscript');
+          ?>
+           
         
     
     
